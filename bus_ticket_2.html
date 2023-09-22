@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            height: 5vh;
+            padding-top: 2vh;
+            background-color: #F75D59;
+            padding-left: 1vh;
+            padding-bottom: 2vh;
+        }
+        #mainly{
+            display:flex;
+        }
+        .filter1{
+            width: 23%;
+            border: 2px solid lightgray;
+        }
+        #filterhead{
+            padding-top: 2vh;
+            padding-left: 1vh;
+            padding-bottom: 2vh;
+            padding-left: 2vh;
+            font-size: 2.2vh;
+            background-color: lightgrey;
+        }
+        #filter_inner{
+            padding-left: 2vh;
+        }
+        main{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        img{
+            height: 2.5vh;
+        }
+        #filter_form{
+            font-size: 2vh;
+            color: grey;
+        }
+        #buses{
+            /* background-color: grey; */
+            width: 75%;
+        }
+        .details{
+            display: flex;
+            margin: 2vh;
+            background-color: white;
+            border-radius: 7px;
+            border: 2px solid lightgray;
+            box-shadow: 1px 2px 4px black;
+            margin-top: 2vh;
+            margin-bottom: 4vh;
+            margin-left: 4vh;
+            transition: 0.4s;
+            /* padding: 4vh;*/
+        } 
+        .details:hover{
+            box-shadow: 6px 6px 16px black;
+        }
+        .bus_dets{
+            text-align: center;
+            padding: 2vh 4vh 2vh 3vh;
+            width: 19vh;
+        }
+        .start{
+            padding: 3vh 4vh 2vh 4vh;
+            text-align: center;
+        }
+        .duration{
+            padding: 3vh 4vh 2vh 2vh;
+        }
+        .end{
+            width: 20vh;
+            padding: 3vh 4vh 2vh 2vh;
+            text-align: center;
+        }
+        .price{
+            width: 9vh;
+            padding: 3vh 4vh 2vh 2vh;
+        }
+    .seats_avail{
+        padding: 3vh 4vh 2vh 2vh;
+
+    }
+    span{
+        font-size: 1.5vh;
+        color: #A9A9A9;
+    }
+    span2{
+        font-size: 2.5vh;
+        transition: 0.3s;
+    }
+    span2:hover{
+        font-size: 3vh;
+    }
+    span4:hover{
+        transition: 0.3s;
+        font-size: 2.5vh;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="top"><p><b>Shimla -> Dharamshala</b></p></div>
+        <br>
+        <hr>
+        <br>
+        <div id="mainly">
+            <div class="filter1">
+                <div id="filterhead"><b>FILTERS</b></div>
+                <hr>
+                <div id="filter_inner" >
+                    <h4>DEPARTURE TIME</h4>
+                        <form id="filter_form">
+                            <input type="checkbox" id="before6am" name="before6am" value="before6am">
+                            <img src="sunrise.jpeg" alt="sorry">
+                            <label for="before6am"> Before 6 am</label><br>
+                            <input type="checkbox" id="6amto12pm" name="6amto12pm" value="6amto12pm">
+                            <img src="day.png" alt="sorry">
+                            <label for="6amto12pm"> 6 am to 12 pm</label><br>
+                            <input type="checkbox" id="12pmto6pm" name="12pmto6pm" value="12pmto6pm">
+                            <img src="sunset.png" alt="sorry">
+                            <label for="12pmto6pm">12 pm to 6 pm</label><br>
+                            <input type="checkbox" id="after6pm" name="after6pm" value="after6pm">
+                            <img src="night.png" alt="sorry">
+                            <label for="after6pm">after 6 pm</label><br><br>
+                        </form>
+                        <h4>BUS TYPES</h4>
+                        <form id="filter_form">
+                            <input type="checkbox" id="seater" name="seater" value="seater">
+                            <label for="seater">Seater</label><br>
+                            <input type="checkbox" id="sleeper" name="sleeper" value="sleeper">
+                            <label for="sleeper">Sleeper</label><br>
+                            <input type="checkbox" id="ac" name="ac" value="ac">
+                            <label for="ac">Ac</label><br>
+                            <input type="checkbox" id="nonac" name="nonac" value="nonac">
+                            <label for="nonac">Non-Ac</label><br><br>
+                        </form>
+                    <h4>ARRIVAL TIME</h4>
+                        <form id="filter_form">
+                            <input type="checkbox" id="before6amA" name="before6amA" value="before6amA">
+                            <img src="sunrise.jpeg" alt="sorry">
+                            <label for="before6amA"> Before 6 am</label><br>
+                            <input type="checkbox" id="6amto12pmA" name="6amto12pmA" value="6amto12pmA">
+                            <img src="day.png" alt="sorry">
+                            <label for="6amto12pmA"> 6 am to 12 pm</label><br>
+                            <input type="checkbox" id="12pmto6pmA" name="12pmto6pmA" value="12pmto6pmA">
+                            <img src="sunset.png" alt="sorry">
+                            <label for="12pmto6pmA">12 pm to 6 pm</label><br>
+                            <input type="checkbox" id="after6pmA" name="after6pmA" value="after6pmA">
+                            <img src="night.png" alt="sorry">
+                            <label for="after6pmA">after 6 pm</label><br>
+                        </form>
+                        
+                    </div>
+                    <br>
+                    <hr>
+            </div>
+
+
+
+            <div id="buses">
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>640</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0670</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>740</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+
+
+
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0101</b></span4>
+                        <br>
+                        <span>Ordinary Non-AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>03:30</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">06h 37m</div>
+
+                    <div class="end">
+                        <span2><b>10:07</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>530</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>610</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>640</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>640</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>640</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="bus_dets">
+                        <span4><b>MRD0018</b></span4>
+                        <br>
+                        <span>Ordinary AC Seater</span>
+                        <br>
+                        <span>2+3</span>
+                    </div>
+
+                    <div class="start">
+                        <span2><b>00:27</b></span2>
+                        <br>
+                        <span>SHIMLA BUS STATION</span>
+                    </div>
+
+                    <div class="duration">05h 17m</div>
+
+                    <div class="end">
+                        <span2><b>05:44</b></span2>
+                        <br>
+                        <span>DHARAMSHALA BUS STATION</span>
+                    </div>
+
+                    <div class="price">
+                        INR <b>640</b>
+                    </div>
+
+                    <div class="seats_avail">
+                        <span><b>48</b> Seats available
+                        <br>
+                        <b>19</b> Windows</span>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </main>
+</body>
+</html>
